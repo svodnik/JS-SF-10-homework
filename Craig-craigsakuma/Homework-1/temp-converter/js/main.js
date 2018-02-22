@@ -27,5 +27,16 @@ function convertC2F(c) {
    return f;
 }
 
-console.log('32F is ' + convertF2C(32) + 'C');
-console.log('0 is' + convertC2F(0) + 'F');
+$(document).ready(function(){
+  $('#fahrenheit_to_celsius').click(function(event){
+    event.preventDefault();
+    let f = $('#temperature').val();
+    $('#temperature').val(convertF2C(f));
+  })
+  $('#celsius_to_fahrenheit').click(function(event){
+    event.preventDefault();
+    let c = $('#temperature').val();
+    $('#temperature').val(convertC2F(c));
+  }) 
+})
+
