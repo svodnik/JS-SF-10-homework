@@ -7,23 +7,20 @@
 
 
  //return first element in document with id "temperature", in this case, the user input
-
-let celcius;
-let temp = document.querySelector("#temperature").value;
-
-   function fToC(){
-      return celcius = (temp - 32) / 1.8;
-      console.log(celcius);
-      document.getElementById("result").value = celcius;
-
-   };
+ 
+document.addEventListener("DOMContentLoaded", function() {
    
-   let firstButton = document.getElementById('fahrenheit_to_celsius');
-   firstButton.addEventListener('click', fToC);
+console.log("Ready");
 
+temp = document.querySelector("#temperature").value;   
+let celcius;
+   function fToC(){
+      let celcius = (temp - 32) / 1.8;
+      console.log(celcius);
+      document.getElementById("result").innerHTML = celcius;
+   };
 
-
-
+document.getElementById("fahrenheit_to_celsius").addEventListener("click", fToC);
 
 
 /*
@@ -33,18 +30,50 @@ let temp = document.querySelector("#temperature").value;
    Test your function.
 */
 
-
-
-  let fahrenheit;
+let fahrenheit;
    function cToF(){
+      fahrenheit = (1.8 * temp) + 32;
+      console.log(fahrenheit);
+      document.getElementById("result").innerHTML = fahrenheit;
+      };
+
+   document.getElementById("celsius_to_fahrenheit").addEventListener("click", cToF);
+
+  });
+
+/* 
+
+   function fToC(){
+      console.log(temp);
+      let celcius;
+      return celcius = (temp - 32) / 1.8;
+      console.log(celcius);
+      document.getElementById("result").value = celcius;
+
+   };
+   let temp = document.querySelector("#temperature").value;
+  console.log(temp);
+ 
+ document.getElementById("fahrenheit_to_celsius").addEventListener("click", fToC);
+
+/*
+2. Create a second function that accepts a temperature value in Celsius and converts it to Fahrenheit.
+   Note: Equation to convert C to F:
+   F = 1.8 * C + 32
+   Test your function.
+
+
+ document.getElementById("celsius_to_fahrenheit").addEventListener("click", cToF);
+
+   function cToF(){
+      console.log(temp);
+      let fahrenheit;
       return fahrenheit = (1.8 * temp) + 32;
       console.log(fahrenheit);
       document.getElementById("result").value = fahrenheit;
 
       };
    
-   let secondButton = document.getElementById('celsius_to_fahrenheit');
-   secondButton.addEventListener('click', cToF); 
 
 
 
