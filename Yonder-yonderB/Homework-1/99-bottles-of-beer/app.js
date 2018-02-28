@@ -10,10 +10,9 @@
   conditional statements at https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else). 
 */
 
-var bottles;
 for (counter = 99; counter >= 1; counter = counter - 1) 
 {
-    if (counter == 1) {
+    if (counter === 1) {
         bottles = 'bottle';
     } else {
         bottles = 'bottles';
@@ -26,7 +25,7 @@ for (counter = 99; counter >= 1; counter = counter - 1)
     console.log(counter+" "+bottles+" of beer.");
     console.log("Take one down.");
     console.log("Pass it around.");
-    if (counter == 1) {
+    if (counter === 1) {
         console.log("No bottles of beer on the wall.");
     }
 }
