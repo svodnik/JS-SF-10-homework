@@ -99,7 +99,7 @@ let some_pet = {
     noise: ["bark","meow","whisker"]
   },
   makeNoise: function(noise){
-  }
+  },
   Description: "Pet vaccination management"
 };
 
