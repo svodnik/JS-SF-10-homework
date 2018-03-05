@@ -21,6 +21,17 @@
 
 // Answer Starts Here
 
+  // 'Calendar'
+  // Description: Our app is a browser-based calendar for keeping track of things
+  // Every 'calendar' has
+  // - name of the month
+  // - days of the week
+  // - the year
+  // Every 'calendar' can
+  // - create or delete an event
+  // - send notification about upcoming event
+  // - highlight the current date
+  
 // Answer Ends Here
 
 
