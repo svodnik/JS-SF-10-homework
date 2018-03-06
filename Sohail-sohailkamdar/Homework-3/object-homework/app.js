@@ -103,6 +103,9 @@ some_pet = {
       if (species === 'Dog'){
         return this.noise
       }
+      else{
+        return ('you only have dogs here.')
+      }
   }
 }
 // Answer Ends Here
