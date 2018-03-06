@@ -21,6 +21,19 @@
 
 // Answer Starts Here
 
+// Every event has
+// - start date and time
+// - end date and time
+// - title
+// - description
+// - location
+
+// Every event can
+// - set reminder
+// - invite a guest
+// - make reoccurring
+
+
 // Answer Ends Here
 
 
@@ -35,6 +48,13 @@
 let pet_owner;
 
 // Answer Starts Here
+
+pet_owner = {};
+pet_owner.name = 'Fred';
+pet_owner.address = {street: '10th St',
+                     city: 'SF',
+                     state: 'CA',
+                     zipcode: '94111'}
 
 // Answer Ends Here
 
@@ -54,6 +74,26 @@ let pet_owner;
 let some_pet;
 
 // Answer Starts Here
+
+function Pet(name, species, breed) {
+  this.name = name;
+  this.species = species;
+  this.breed = breed;
+  this.noise = function() {
+    if (this.species === "dog") {
+      return 'bark';
+    } else if (this.species === "cat") {
+      return 'meow';
+    } else if (this.species === "bird") {
+      return 'tweet';
+    }
+  }
+};
+
+some_pet = new Pet('Duncan','dog','Greyhound')
+
+some_pet.noise()
+
 
 // Answer Ends Here
 
