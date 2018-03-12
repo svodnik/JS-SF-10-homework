@@ -16,7 +16,7 @@ for(var i=99; i > 0; i--) {
       console.log(i + " bottle of beer on the wall, " + i + " bottle of beer. \n Take one down and pass it around, no more bottles of beer on the wall.")
   }
   else {
-  console.log(i + " bottles of beer on the wall, " + i + " bottles of beer. \n Take one down and pass it around, " + i + " bottles of beer on the wall.")
+  console.log(i + " bottles of beer on the wall, " + i + " bottles of beer. \n Take one down and pass it around, " + i-1 + " bottles of beer on the wall.")
   }
 }
 
