@@ -29,5 +29,5 @@ saveButton.addEventListener("click", function() {
 }, false);
 
 printButton.addEventListener("click", function() {
-  favoriteButton.innerHTML = favorites.join(" \n");
+  favoriteButton.innerHTML = favorites.join(" \br");
 }, false);
