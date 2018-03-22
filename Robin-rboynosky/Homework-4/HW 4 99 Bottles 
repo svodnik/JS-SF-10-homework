@@ -1,0 +1,25 @@
+//Homework 4:
+//This is the best I could come up with!
+
+/*const button = document.querySelector('#play-button');
+
+button.addEventListener('click', function() {
+  const lyricListLi = document.createElement('li');
+  document.createTextNode(lyricsListLi);
+  for (let i = 99; i > 0; i--) {
+    console.log(i + ' bottles of beer on the wall \n' + 
+                i + ' bottles of beer \n' + 
+                'You take one down, pass it around\n' +
+                (i - 1) + ' bottles of beer on the wall.');
+    };
+}, false);*/
+
+
+//jQuery:
+
+const $button = $('#play-button');
+$('$button').on('click', function(){
+  const $lyricListLi = $('<li>');
+  lyricsListLi.('');
+});
+
