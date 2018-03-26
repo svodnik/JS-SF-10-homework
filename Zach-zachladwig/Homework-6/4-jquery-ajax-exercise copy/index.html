@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>The temperature in <span id="location1"></span> is <span id="temp1"></span>.</h2>
+  <p id="desc1"></p>
+  <img id="img1">
+  <p>(from OpenWeatherMap.org)</p>
+  <h2>The temperature in <span id="location2"></span> is <span id="temp2"></span>.</h2>
+  <p id="desc2"></p>
+  <img id="img2">
+  <p>(from WeatherUnlocked.com)</p>
+
+
+  <input type="text" name="city" value="" placeholder="city" id="city">
+  <input type="text" name="state" value="" placeholder="state" id="state">
+  <input type="submit" value="Get Weather" id="getTemp">
+
+  <p id="error"></p>
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
