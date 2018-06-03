@@ -41,16 +41,18 @@ $addQuestionButton.on('click', function(event) {
   $newQuestionInput = $('#question')
 
   let text = $newQuestionInput.val();
-  content =
-  `
-  <label>${text}</label>
-  <input type="text" class="form-control">
-  <button>Remove question</button>
-  `
-  //CHAINING: this chains together element creation, adding html, and a class.
-  $newQuestion = $('<li>').html(content).addClass('form-group padout');
-  $questionList.append($newQuestion);
-  $newQuestionInput.val('');
+  if(text !== '') {
+    content =
+    `
+    <label>${text}</label>
+    <input type="text" class="form-control">
+    <button>Remove question</button>
+    `
+    //CHAINING: this chains together element creation, adding html, and a class.
+    $newQuestion = $('<li>').html(content).addClass('form-group padout');
+    $questionList.append($newQuestion);
+    $newQuestionInput.val('');
+  }
 })
 // EVENT DELEGATION: this does event delegation from the list to the buttons
    $questionList.on("click", 'li button', function(event) {
@@ -59,12 +61,13 @@ $addQuestionButton.on('click', function(event) {
    })
 
 // EVENT DELEGATION: this does event delegation from the list to the list items
-   $questionList.on("mouseenter", "li", function(event) {
-     $(this).addClass('bg-warning');
-     $(this).siblings.removeClass('bg-warning');
-   })
-
-// EVENT DELEGATION: this does event delegation from the list to the list items
-   $questionList.on("mouseleave", "li", function(event) {
-     $(this).removeClass('bg-warning');
-   })
+   $questionList.on("mouseenter mouseleave", "li", function(event) {
+     event.preventDefault();
+     if(event.type === 'mouseenter') {
+       $(this).addClass('bg-warning');
+       $(this).siblings().removeClass('bg-warning');
+     }
+     else if(event.type === 'mouseleave') {
+       $(this).removeClass('bg-warning');
+     }
+   });
